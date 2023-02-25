@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristian Leite</title>
+</head>
+<body background="vintage-grunge-paper-background_1048-10911.avif">
+    <div class="imagem">
+        <img src="my.png" alt="Avatar" height="350" margin="center">
+    </div>
+    <p class="texto" >"Para o senhor poço ser apenas um aluno, para outros um amigo ou um conhecido próximo até mesmo distante. Ou podemos dizer um desconhecido como aqueles que cruzamos na maior parte do tempo, com seus problemas e anceios, preocupados ou desecupados. Sempre focados em ser ou parecer algo e como ele se adequa a outros seres tambem pensantes. A famosa influência, se ela estar sobre outros seres é uma virtude? Ou será manipulação? Depende da visão, ou seja do quão longe ou perto estamos da luz, pois ela nos ilumina mas ofusca a visão. " - Cristian Leite</p>  
+    <style>
+        .imagem {
+    margin:0 auto; /* margem vertical definida como 0 e horizontal automática */
+    width:200px;
+}
+        p {
+        max-width: 480px;
+        text-align: center;
+        margin: 60px auto;
+        font-family: 'Courier New', Courier, monospace;
+        color: #000000;
+    }
+    
+    p::after {
+        content: '|';
+        margin-left: 5px;
+        opacity: 1;
+        animation: blink .7s infinite;
+    }
+    
+    @keyframes blink {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+    </style>
+    <script>
+        function typeWriter(e) {
+            const textoArray = e.innerHTML.split('')
+            e.innerHTML = ''
+            textoArray.forEach((letra, i) => {
+                setTimeout(() => e.innerHTML += letra, 75 * i)
+            });
+        }
+        const texto = document.querySelector('p')
+        typeWriter(texto)
+    </script>
+</body>
+</html>
