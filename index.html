@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="Pt-Br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristian Leite</title>
 </head>
+
 <body background="vintage-grunge-paper-background_1048-10911.avif">
     <div class="imagem">
         <img src="my.png" alt="Avatar" height="350" margin="center">
     </div>
-    <p class="texto" >Olá! Me chamo Cristian Leite, para o senhor poço ser apenas um aluno, para outros um amigo ou um conhecido próximo ou até mesmo distante. Ou podemos dizer um desconhecido como aqueles que cruzamos na maior parte do tempo, com seus problemas e anceios, preocupados ou desecupados. Porém agora posso ser um aluno de análise de desenvolvimento de sistemas e atualmente aprendendo JavaScript na maior parte do tempo, mas será que com minha dedicação e trabalho árduo poderei me tornar um programador completo e altamente qualificado? Alguém capaz de criar soluções inovadoras e eficientes para os mais diversos desafios tecnológicos? Não sei, só saberei se eu tentar, obrigado pela a atenção!</p>  
+    <p class="texto">Olá! Me chamo Cristian Leite, para o senhor poço ser apenas um aluno, para outros um amigo ou um
+        conhecido próximo ou até mesmo distante. Ou podemos dizer um desconhecido como aqueles que cruzamos na maior
+        parte do tempo, com seus problemas e anceios, preocupados ou desecupados. Porém agora posso ser um aluno de
+        análise de desenvolvimento de sistemas e atualmente aprendendo JavaScript na maior parte do tempo, mas será que
+        com minha dedicação e trabalho árduo poderei me tornar um programador completo e altamente qualificado? Alguém
+        capaz de criar soluções inovadoras e eficientes para os mais diversos desafios tecnológicos? Não sei, só saberei
+        se eu tentar, desculpa o incômodo e obrigado pela a atenção!</p>
     <style>
         .imagem {
-    margin:0 auto;
-    width:200px;
-}
+            margin: 0 auto;
+            width: 200px;
+        }
+
         p {
-        max-width: 480px;
-        text-align: center;
-        margin: 60px auto;
-        font-family: 'Courier New', Courier, monospace;
-        color: #000000;
-    }
-    
-    p::after {
-        content: '|';
-        margin-left: 5px;
-        opacity: 1;
-        animation: blink .7s infinite;
-    }
-    
-    @keyframes blink {
-        0%, 100% {
+            max-width: 480px;
+            text-align: center;
+            margin: 60px auto;
+            font-family: 'Courier New', Courier, monospace;
+            color: #000000;
+        }
+
+        p::after {
+            content: '|';
+            margin-left: 5px;
             opacity: 1;
+            animation: blink .7s infinite;
         }
-        50% {
-            opacity: 0;
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
-    }
     </style>
     <script>
         function typeWriter(e) {
             const textoArray = e.innerHTML.split('')
             e.innerHTML = ''
             textoArray.forEach((letra, i) => {
-                setTimeout(() => e.innerHTML += letra, 75 * i)
+                setTimeout(() => e.innerHTML += letra, 50 * i)
             });
         }
         const texto = document.querySelector('p')
